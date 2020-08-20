@@ -21,7 +21,7 @@ public class Main {
             System.out.println(t.getAthletesTeam());
         }
 
-        for (int i = 0; i < 2; i++) {
+        for (int i = 0; i < athletesNum; i++) {
             int randIndex1 = Utils.randIntBetween(0, athletesNum - 1);
             int randIndex2 = Utils.randIntBetween(0, athletesNum - 1);
             Meeting m = new Meeting(teamsList.get(0).getAthletesTeam().get(randIndex1), teamsList.get(1).getAthletesTeam().get(randIndex2));
@@ -29,7 +29,6 @@ public class Main {
         }
 
         Meeting m1 = new Meeting(teamsList.get(0), teamsList.get(1));
-        m1.playMatch();
         m1.playMatch();
     }
 }
