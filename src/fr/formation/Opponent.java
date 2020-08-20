@@ -4,9 +4,6 @@ public class Opponent {
 
     private String name;
 
-    public Opponent() {
-    //
-    }
     public Opponent(String name) {
         this.name = name;
     }
