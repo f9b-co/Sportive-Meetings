@@ -2,6 +2,7 @@ package fr.formation;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class Utils {
 
@@ -9,8 +10,8 @@ public class Utils {
         if (min > max) {
             throw new IllegalArgumentException("max("+max+") must be greater than min("+min+")");
         }
-
-        return (int)(Math.random() * ((max - min) + 1)) + min;
+    return ThreadLocalRandom.current().nextInt(min, max + 1);
+        //return (int)(Math.random() * ((max - min) + 1)) + min;
     }
 
     public static List<Team> buildTeam(List<String> namesList, int athletesNum, String teamName, List<Team> teamsList){

@@ -15,6 +15,8 @@ public class Main {
                 Arrays.asList("docteur Leonard McCoy", "lieutenant Hikaru Sulu", "lieutenant Commandeur Montgomery Scott",
                         "Monsieur Spock", "infirmière Christine Chapel", "lieutenant Nyota Uhura", "enseigne Pavel Chekov",
                         "capitaine James T. Kirk", "yeoman Janice Rand", "ambassadeur Sarek","Tina Lawton"));
+        List<String> refereesNames = new ArrayList<>(
+                Arrays.asList("Albator", "Capitaine Flame", "Actarus"));
 
         int athletesNum = Utils.randIntBetween(2, 11);
         List<Team> teamsList = new ArrayList<>();
@@ -29,12 +31,14 @@ public class Main {
         for (int i = 0; i < athletesNum; i++) {
             int randIndex1 = Utils.randIntBetween(0, athletesNum - 1);
             int randIndex2 = Utils.randIntBetween(0, athletesNum - 1);
-            Meeting m = new Meeting(teamsList.get(0).getAthletesTeam().get(randIndex1),
+            IndividualMeeting m = new IndividualMeeting(teamsList.get(0).getAthletesTeam().get(randIndex1),
                     teamsList.get(1).getAthletesTeam().get(randIndex2));
-            m.playMatch();
+            Referee refer = new Referee(refereesNames.get(Utils.randIntBetween(0, 2)));
+            refer.launchMatch(m);
         }
 
-        Meeting m1 = new Meeting(teamsList.get(0), teamsList.get(1));
-        m1.playMatch();
+        TeamMeeting m1 = new TeamMeeting(teamsList.get(0), teamsList.get(1));
+        Referee refer = new Referee(refereesNames.get(Utils.randIntBetween(0, 2)));
+        refer.launchMatch(m1);
     }
 }

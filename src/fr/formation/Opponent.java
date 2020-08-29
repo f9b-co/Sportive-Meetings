@@ -4,7 +4,7 @@ public class Opponent {
 
     private String name;
 
-    public Opponent(String name) {
+    protected Opponent(String name) {
         this.name = name;
     }
 
