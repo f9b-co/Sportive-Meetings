@@ -14,12 +14,11 @@ public class TeamMeeting extends Meeting {
     }
 
     public void playMatch(String refereeName) {
-        String result = "- " + refereeName + " arbitre la partie collective : " +
+        String matchDisplay = "- " + refereeName + " arbitre la partie collective : " +
                 team1.getName() + "(" + team1.getAthletesTeam().size() + ")" + " vs " +
                 team2.getName() + "(" + team2.getAthletesTeam().size() + ")\n" +
-                "\t* Mi-temps : " + middleScore1 + "-" + middleScore2 + "\n" +
-                "\t* Fin de partie : " + finalScore1 + "-" + finalScore2;
-        System.out.println(result);;
-    };
+                result;
+        System.out.println(matchDisplay);
+    }
 
 }

@@ -14,11 +14,10 @@ public class IndividualMeeting extends Meeting {
     }
 
     public void playMatch(String refereeName) {
-        String result = "- " + refereeName + " arbitre la partie individuelle : " +
+        String matchDisplay = "- " + refereeName + " arbitre la partie individuelle : " +
                 athlete1.getName() + " vs " + athlete2.getName() + "\n" +
-                "\t* Mi-temps : " + middleScore1 + "-" + middleScore2 + "\n" +
-                "\t* Fin de partie : " + finalScore1 + "-" + finalScore2;
-        System.out.println(result);;
-    };
+                result;
+        System.out.println(matchDisplay);
+    }
 
 }
